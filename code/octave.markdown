@@ -49,4 +49,16 @@ setenv ("GNUTERM", "X11")
 PS1('❯❯ ')
 {% endhighlight %}
 
+When using {% highlight bash %}gnuplot{% endhighlight %} as the graphics toolkit, if the {% highlight bash %}aqua{% endhighlight %} terminal is not supported by {% highlight bash %}gnuplot{% endhighlight %}, follow the steps below to resolve the problem.
+
+*Uninstall {% highlight bash %}gnuplot{% endhighlight %}:
+{% highlight bash %}
+brew uninstall gnuplot
+{% endhighlight %}
+*Install [Aquaterm](http://aquaterm.sourceforge.net)
+*Install {% highlight bash %}gnuplot{% endhighlight %}
+{% highlight bash %}
+brew install gnuplot --with-aquaterm --with-qt4
+{% endhighlight %}
+
 I'm pretty sure that should get you up and running, but in case I missed a step, feel free to send me an email or [fix it for me](https://github.com/adampash/adampash.github.io/edit/source/code/octave.markdown).
